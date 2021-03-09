@@ -21,4 +21,13 @@ from . import views
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('index', views.index, name='index'),
+    path('blockchain-team', views.blockchainTeam, name='blockchainTeam'),
+    path('databases-team', views.databasesTeam, name='databasesTeam'),
+    path('graphic-team', views.graphicTeam, name='graphicTeam'),
+    path('ia-team', views.IATeam, name='IATeam'),
+    path('objects-team', views.objectsTeam, name='objectsTeam'),
+    path('softwares-team', views.softwaresTeam, name='softwaresTeam'),
+    path('about', views.about, name='about'),
+    path('contact', views.contact, name='contact'),
 ]
