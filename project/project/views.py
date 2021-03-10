@@ -26,3 +26,6 @@ def about(request):
 
 def contact(request):
     return render(request, 'project/contact.html')
+
+def cv(request):
+    return render(request, 'project/cv.html');
