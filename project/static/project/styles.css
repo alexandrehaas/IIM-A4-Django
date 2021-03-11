@@ -22,6 +22,10 @@ body{
     background-color: #108d6f;
 }
 
+.viewCv{
+    color: #fff;
+}
+
 .comp, .upload{
     color: #fff !important;
 }
