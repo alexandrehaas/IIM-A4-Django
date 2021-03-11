@@ -1,5 +1,6 @@
 from django.db import models
 from multiselectfield import MultiSelectField
+from django.forms import ModelForm
 from .validators import validate_file_extension
 
 # Create your models here.
@@ -33,3 +34,8 @@ class Applicant(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} | {self.email}"
+
+class ApplicantForm(ModelForm):
+    class Meta:
+        model = Applicant
+        fields = ['first_name', 'last_name', 'email', 'skills', 'cv']
