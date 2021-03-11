@@ -24,12 +24,12 @@ SKILLS = (
     )
 
 class Applicant(models.Model):
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
-    email = models.CharField(max_length=255)
+    first_name = models.CharField(max_length=60)
+    last_name = models.CharField(max_length=60)
+    email = models.EmailField(max_length=320, unique=True)
     skills = MultiSelectField(max_choices=8, max_length=255, choices=SKILLS)
     cv = models.FileField(upload_to='cv/', validators=[validate_file_extension])
     pub_date = models.DateTimeField('date published')
 
     def __str__(self):
-        return f"{self.first_name} | {self.last_name} | {self.email}"
+        return f"{self.first_name} {self.last_name} | {self.email}"
