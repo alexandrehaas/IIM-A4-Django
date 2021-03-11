@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cv'
+    'cv.apps.CvConfig',
+    'multiselectfield'
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
 ]
+
+MEDIA_ROOT = BASE_DIR / "media"
+
+MEDIA_URL = '/media/'
