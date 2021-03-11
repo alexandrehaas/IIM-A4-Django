@@ -1,5 +1,93 @@
 {% extends "project/base.html" %} 
-{% block title %}CV{% endblock %} 
-{%block body%}
-<h1>Affichage des cv</h1>
+{% block title %} 
+    Accueil 
+{% endblock %} 
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="w-100 d-flex align-items-center flex-column">
+                    <p class="text-xs-center title">Nous rejoindre</p>
+
+                    <div class="form-group w-75 d-flex flex-row justify-content-center">
+                        <span style="margin-right: 10px;"><i style="padding: 0px 5px;" class="fa fa-user bigicon"></i></span>
+                        <div class="w-50">
+                            <input id="fname" name="name" type="text" placeholder="Votre nom" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group w-75 d-flex flex-row justify-content-center">
+                        <span style="margin-right: 10px;"><i class="fa fa-envelope-o bigicon"></i></span>
+                        <div class="w-50">
+                            <input id="email" name="email" type="text" placeholder="Votre adresse mail" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="upload form-group w-75 d-flex flex-row justify-content-center">
+                        <span style="margin-right: 10px;"><i class="fa fa-file-pdf-o bigicon"></i></span>
+                        <div class="w-50">
+                            <label for="cv">Uploadez votre cv</label>
+                            <input type="file" name="cv" id="cv">
+                        </div>
+                    </div>
+
+                    <div class="comp form-group w-75 d-flex flex-row justify-content-center">
+                        <span style="margin-right: 10px;"><i class="fa fa-terminal bigicon"></i></span>
+                        <div class="w-50 d-flex flex-row flex-wrap">
+                            <div class="w-25">
+                                <label for="html">html</label>
+                                <input type="checkbox" name="html" id="cv">
+                            </div>
+                            <div class="w-25">
+                                <label for="cv">html</label>
+                                <input type="checkbox" name="cv" id="cv">
+                            </div>
+                            <div class="w-25">
+                                <label for="cv">html</label>
+                                <input type="checkbox" name="cv" id="cv">
+                            </div>
+                            <div class="w-25">
+                                <label for="cv">html</label>
+                                <input type="checkbox" name="cv" id="cv">
+                            </div>
+                            <div class="w-25">
+                                <label for="cv">html</label>
+                                <input type="checkbox" name="cv" id="cv">
+                            </div>
+                            <div class="w-25">
+                                <label for="cv">html</label>
+                                <input type="checkbox" name="cv" id="cv">
+                            </div>
+                            <div class="w-25">
+                                <label for="cv">html</label>
+                                <input type="checkbox" name="cv" id="cv">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .title {
+        color: #fff;
+        font-size: 27px;
+        padding: 10px;
+    }
+
+    .bigicon {
+        font-size: 35px;
+        color: #fff;
+    }
+</style>
+
 {% endblock %}
