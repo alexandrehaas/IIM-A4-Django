@@ -30,7 +30,7 @@ Projet Django CV
 
 ```
 > pip install -r requirements.txt
-> docker-compose up
+> docker-compose up -d
 > cd project
 > python manage.py migrate
 > python manage.py createsuperuser
