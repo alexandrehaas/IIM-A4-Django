@@ -15,15 +15,15 @@ Projet Django CV
 ### Widows 10
 
 ```ps1
-> python -m venv .vitualenvs
-> .vitualenvs\Scripts\activate.ps1
+> python -m venv .virtualenvs
+> .virtualenvs\Scripts\activate.ps1
 ```
 
 ### Unix / MacOS
 
 ```bash
-> python3 -m venv .vitualenvs
-> source .vitualenvs/bin/activate
+> python3 -m venv .virtualenvs
+> source .virtualenvs/bin/activate
 ```
 
 ## Installation
