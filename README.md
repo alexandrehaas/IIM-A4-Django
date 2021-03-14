@@ -12,7 +12,7 @@ Projet Django CV
 > cd IIM-A4-Django
 ```
 
-### Widows 10
+### Windows 10
 
 ```ps1
 > python -m venv .virtualenvs
