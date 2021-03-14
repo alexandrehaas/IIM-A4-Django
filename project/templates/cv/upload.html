@@ -1,0 +1,71 @@
+{% extends "project/base.html" %} 
+{% block title %} 
+    Nous rejoindre
+{% endblock %}
+{% block body %} 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+            <form method="post" enctype="multipart/form-data">
+                {{ applicant_form.management_form }}
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="{{ applicant_form.first_name.id_for_label }}">Prénom</label>
+                    {{ applicant_form.first_name }}
+                    {% if applicant_form.first_name.errors%}
+                    <div class="alert alert-danger" role="alert">
+                        {{ applicant_form.first_name.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="{{ applicant_form.last_name.id_for_label }}">Nom</label>
+                    {{ applicant_form.last_name }}
+                    {% if applicant_form.last_name.errors%}
+                    <div class="alert alert-danger" role="alert">
+                        {{ applicant_form.last_name.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="{{ applicant_form.email.id_for_label }}">E-mail</label>
+                    {{ applicant_form.email }}
+                    {% if applicant_form.email.errors%}
+                    <div class="alert alert-danger" role="alert">
+                        {{ applicant_form.email.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label>Compétences</label>
+                    <select class="selectpicker form-control" multiple data-live-search="true" id="{{ applicant_form.skills.id }}" name="{{ applicant_form.skills.name }}" data-max-options="8" title="Sélectionnez vos compétences" >
+                        {% for value, text in applicant_form.skills.field.choices %}
+                            <option value="{{ value }}" {% if value in applicant_form.skills.data %} selected {% endif %}>{{ text }}</option>
+                        {% endfor %}
+                    </select>
+                    {% if applicant_form.skills.errors%}
+                        <div class="alert alert-danger" role="alert">
+                            {{ applicant_form.skills.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="{{ applicant_form.cv.id_for_label }}">Votre CV (.pdf, .png, .jpg)</label>
+                    {{ applicant_form.cv }}
+                    {% if applicant_form.cv.errors%}
+                    <div class="alert alert-danger" role="alert">
+                        {{ applicant_form.cv.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %} 

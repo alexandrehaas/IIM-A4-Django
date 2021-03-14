@@ -20,6 +20,7 @@
 
 body{
     background-color: #108d6f;
+    color: #fff;
 }
 
 .viewCv{
@@ -34,6 +35,15 @@ body{
     display: flex;
     width: 50%;
     margin: 0 auto;
+}
+
+.col-3{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.card-text, .card-title {
+    color: #000;
 }
 
 .card-pages .card-title{
@@ -118,6 +128,7 @@ section .section-title {
     position: relative;
     -webkit-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
     z-index: 2;
     margin-bottom: 30px;
 }
@@ -233,4 +244,8 @@ section .section-title {
     font-size:13px;
     color:#fff;
     margin-bottom:0;
+  }
+
+  ul {
+      margin: 0;
   }
